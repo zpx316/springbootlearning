@@ -53,3 +53,10 @@ logging.pattern.file =
 切换为log4j2
 导入 log4j2的依赖
 排除logback的依赖
+
+
+web开发
+springboot 自定义的静态资源可以放在 resource 文件夹下的
+static 文件夹
+resource文件夹
+META-INF/resource 文件夹
