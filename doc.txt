@@ -6,3 +6,12 @@
 @ConfigurationProperties
 批量导入Environment中的属性
 @Value 导入环境中的单个属性 支持SL表达式
+
+
+
+profile
+springboot 会加载文件名为 application-{profile}.properties/yml的配置文件
+默认以application.properties 中的属性为准
+指定激活环境 :spring.profiles.active = {profile}
+
+设置debug =true 让springboot 启动时在控制台打印自动配置了哪些类
