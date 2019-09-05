@@ -15,3 +15,41 @@ springboot 会加载文件名为 application-{profile}.properties/yml的配置�
 指定激活环境 :spring.profiles.active = {profile}
 
 设置debug =true 让springboot 启动时在控制台打印自动配置了哪些类
+
+
+spring使用的日志框架是JCL
+springboot 使用的是SLF4J和logback
+
+将系统中所有框架的日志输出都统一到SLF4J
+1.将其他框架的日志框架排除出去
+2.用中间包替换原来的日志框架
+3.导入SLF4J的其他实现
+
+
+springboot 能自动适配所有日志，在底层使用slf4j和logback 记录日志，
+引入其他框架时，只需要将其他框架的日志jar包排除出去
+
+sjf4j 的日志级别
+trace
+debug
+info
+warn
+error
+
+设置日志文件名  ，也可用来设置路径
+logging.file =
+设置日志文件路径 ,在当前路径下创建默认名为spring.log 的日志文件。日志目录日东创建
+logging.path =
+设置在控制台中输出日志的格式
+logging.pattern.console=
+设置在文件中输出日志的格式
+logging.pattern.file =
+
+
+切换日志框架
+导入中间适配层的jar包
+排除logback 的依赖
+
+切换为log4j2
+导入 log4j2的依赖
+排除logback的依赖
