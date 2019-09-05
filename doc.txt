@@ -1,0 +1,8 @@
+@ImportResource
+导入spring配置文件
+加在启动类、被@configuration标注的类
+@PropertySource
+导入外部配置文件  ,可以加在任@Compoment派生注解锁标注的类上？
+@ConfigurationProperties
+批量导入Environment中的属性
+@Value 导入环境中的单个属性 支持SL表达式

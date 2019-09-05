@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -17,12 +18,22 @@ public class ZpApplicationTests {
 
 
     @Value("${name}")
-    private String name ;
+    private String name;
+    @Autowired
+    private ApplicationContext ac;
+
+    @Test
+    public void serviceTest() {
+        boolean b = ac.containsBean("helloService");
+
+        System.out.println(b);
+
+    }
 
     @Test
     public void contextLoads() {
-//        System.out.println(person.getMaps().get("k1"));
-        System.out.println("name : "+name);
+        System.out.println(person);
+        System.out.println("name : " + name);
     }
 
 }
