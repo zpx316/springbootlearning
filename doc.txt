@@ -60,3 +60,18 @@ springboot 自定义的静态资源可以放在 resource 文件夹下的
 static 文件夹
 resource文件夹
 META-INF/resource 文件夹
+
+
+thymeleaf
+默认映射前缀为 classpath:template/
+默认映射后轴为 .html
+thymeleaf 语法
+1.标签
+1> th:text 改变当前 文本域内容  th:{可以是任意html属性}  th:utext 不转译特殊字符
+2> th:insert th:replace 用于替换模板片段 类似jsp:include
+3> th:each 类似于 c:foreach
+4> th:if th:unless th:switch th:case 用于做条件判断
+5> th:object th:with 用于声明变量 类似于 c:set
+6> th:value th:id th:name 改变html 属性值
+7> th:append th:prepend 在前后追加
+2.表达式
