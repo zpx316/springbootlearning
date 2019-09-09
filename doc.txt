@@ -75,3 +75,22 @@ thymeleaf 语法
 6> th:value th:id th:name 改变html 属性值
 7> th:append th:prepend 在前后追加
 2.表达式
+
+
+
+
+springmvc 自动配置
+1.自动配置了视图解析器 contentNegotiatingViewResolver 和BeanNameViewResolver
+视图解析器 ViewResolver :根据方法返回得到视图对象，视图对象决定方法如何返回--转发、重定向
+2.自动配置了静态资源文件夹 webJars
+3.自动配置了静态访问首页  index.html
+4.自动注册了转换器
+
+
+
+Converter : public String user(User user) ;类型转换使用Converter
+Formatter :格式化器 2018-09-07 --date ,注册条件是在配置了属性spring.mvc.date-format
+5.自动配置了HttpMessageConverter SpringMVC用来 转换请求和响应
+
+
+
